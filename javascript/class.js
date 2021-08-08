@@ -1,23 +1,23 @@
-// class User {
-//   constructor(firstName, lastName, age) {
-//     this.firstName = firstName;
-//     this.lastName = lastName;
-//     this.age = age;
-//   }
+class User {
+  constructor(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
 
-//   get age() {
-//     return this_age;
-//   }
-//   set age(value) {
-//     // if(value<0){
-//     //   throw Error("age can not be negative");
-//     // }
-//     this_age = value < 0 ? 0 : value;
-//   }
-// }
+  get age() {
+    return this_age;
+  }
+  set age(value) {
+    // if(value<0){
+    //   throw Error("age can not be negative");
+    // }
+    this_age = value < 0 ? 0 : value;
+  }
+}
 
-// const mooseong = new User('MOO', 'SEONG', 15);
-// console.log(mooseong.age);
+const mooseong = new User('MOO', 'SEONG', 15);
+console.log(mooseong.age);
 
 // 상속
 class Shape {

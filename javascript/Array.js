@@ -16,7 +16,9 @@ fruits.forEach(fruit => console.log(fruit));
 // unshift : 배열에서 첫번째 인덱스부터 원소 삽입
 // shift : 배열에서 첫번째 인덱스부터 원소 삭제
 // splice : remove an item by index position
+
 console.log(fruits);
+console.clear();
 fruits.splice(1, 1);
 console.log(fruits);
 fruits.splice(1, 1, '🍟', '🌭');
@@ -29,5 +31,4 @@ console.log(newfruit);
 // searching
 // indexOf : 배열의 몇번째 인덱스에 들어가있는지 확인하기
 // includes : 배열에 원소가 들어가있으면 true를 반환
-console.clear();
 console.log(newfruit.indexOf('🥖'));
