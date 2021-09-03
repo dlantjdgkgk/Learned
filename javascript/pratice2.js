@@ -1,5 +1,6 @@
-// Q1. make a string out of an array
+// Q1. make a string out of an array  배열을 => 문자열로
 {
+  console.clear();
   const fruits = ['apple', 'banana', 'orange'];
   const result = fruits.join();
   console.log(result)
@@ -7,8 +8,8 @@
 
 // Q2. make an array out of a string
 {
-  const fruits = '🍎, 🥝, 🍌, 🍒';
-  const result = fruits.split(',');
+  const fruits = '🍎!🥝🍌🍒';
+  const result = fruits.split('!');
   console.log(result);
 }
 
@@ -35,7 +36,6 @@ class Student {
     this.score = score;
   }
 }
-
 const students = [
   new Student('A', 29, true, 45),
   new Student('B', 28, false, 80),
@@ -47,32 +47,29 @@ const students = [
 // Q5. find a student with the score 90
 {
   console.clear();
-  if (students.score === 90) {
-    console.log(students);
-  }
-  // const result = students.find((student) => student.score === 90)
-  // console.log(result)
+  const result = students.find((student) => student.score === 90)
+  console.log(result)
 }
 
 // Q6. make an array of enrolled students
 {
-  const result = students.filter((student) => student.enrolled);
+  const result = students.filter((student) => student.score);
   console.log(result);
 }
 
 // Q7. make an array containing only the students' scores
 // result should be: [45, 80, 90, 66, 88]
 {
-  const result = students.map((student) => student.score);
+  const result = students.map((student) => student.score * 2);
   console.log(result)
 }
 
 // Q8. check if there is a student with the score lower than 50
 {
   const result = students.some((student) => student.score < 50);
-  // some : 배열중 하나만 만족해도 true를 반환한다.
+  // some : 배열중 하나만 만족해도 true를 반환한다. 
   console.log(result)
-  const result2 = students.every((student) => student.score < 50);
+  const result2 = students.every((student) => student.score < 90);
   // every: 배열중 하나만 만족하지 않으면 false를 반환한다.
   console.log(result2)
 }
@@ -83,6 +80,7 @@ const students = [
   console.log(result / students.length)
 }
 
+
 // Q10. make a string containing all the scores
 // result should be: '45, 80, 90, 66, 88'
 {
@@ -91,7 +89,7 @@ const students = [
 }
 
 // Bonus! do Q10 sorted in ascending order
-// result should be: '45, 66, 80, 88, 90'
+// result should be: '45, 66, 80, 88, 90' 
 {
   const result = students.map((student) => student.score).sort((a, b) => a - b).join();
   console.log(result)

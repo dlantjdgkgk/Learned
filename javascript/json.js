@@ -30,7 +30,6 @@ json = JSON.stringify(Rabbit, (key, value) => {
 console.log(json);
 
 // 2. JSON to object
-console.clear();
 json = JSON.stringify(Rabbit);
 const obj = JSON.parse(json);
 console.log(obj);
